@@ -1,7 +1,11 @@
 const express = require('express');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Serve JSON data from file
 app.get('/data', (req, res) => {
